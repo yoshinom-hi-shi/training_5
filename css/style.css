@@ -1,0 +1,139 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ヘッダー */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #BEA574;
+    color: white;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    font-size: 16px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.header_box {
+    width: 444px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.header_left {
+    width: 100px;
+    height: auto;
+}
+
+.header_right {
+    display: flex;
+    width: 444px;
+    gap: 52px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    white-space: nowrap;
+}
+
+.header_right a {
+    color: white;
+    text-decoration: none;
+}
+
+.hheadter_right a:hover {
+    opacity: 0.5;
+}
+
+/* ヒーローセクション */
+#hero {
+    background: url('path/to/your/fireworks-image.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero h2 {
+    font-size: 3em;
+}
+
+/* セクション */
+section {
+    padding: 20px;
+    background: #f9f9f9;
+    margin: 20px 0;
+}
+
+section h2 {
+    color: #333;
+}
+
+#schedule, #access, #tickets {
+    text-align: center;
+}
+
+/* フォーム */
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+}
