@@ -10,15 +10,16 @@ html {
 }
 
 /* ヘッダー */
-header {
+.fixed-header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #BEA574;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 10px;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    justify-content: center;
     display: flex;
     font-size: 16px;
     box-sizing: border-box;
@@ -26,12 +27,13 @@ header {
 }
 
 .header_box {
-    width: 444px;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    flex: 1;
 }
 
 .header_left {
@@ -46,6 +48,7 @@ header {
     margin: 0 auto;
     justify-content: flex-start;
     white-space: nowrap;
+    flex: 1;
 }
 
 .header_right a {
@@ -53,87 +56,352 @@ header {
     text-decoration: none;
 }
 
-.hheadter_right a:hover {
+.header_right a:hover {
     opacity: 0.5;
 }
 
-/* ヒーローセクション */
-#hero {
-    background: url('path/to/your/fireworks-image.jpg') no-repeat center center/cover;
-    height: 400px;
+/* ハンバーガーメニューのスタイル */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: transparent;
+    z-index: 1100;
+}
+
+.hamburger_line {
+    display: block;
+    width: 18px;
+    height: 1px;
+    background-color: none;
+    border: 0.5px solid white ;
+    margin: 3px auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger_line::before {
+    top: -10px;
+}
+
+.hamburger_line::after {
+    bottom: -10px;
+}
+
+.hamburger.is-active .hamburger_line ,
+.hamburger.is-active .hamburger_line ::before
+.hamburger.is-active .hamburger_line ::after {
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: all 0.3s ease;
+    transform: translateX(50%);
+}
+
+.hamburger.is-active .hamburger_line:nth-child(1) {
+    transform: rotate(-45deg) translate(-1px, 2px);
+}
+
+.hamburger.is-active .hamburger_line:nth-child(2){
+    display: none;
+}
+
+.hamburger.is-active .hamburger_line:nth-child(3){
+    transform: rotate(45deg) translate(-1px, -2px);
+}
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 40px; /* ヘッダーの高さを考慮 */
+    width: 100%;
+    background-color: #BEA574;
+    text-align: center;
+    z-index: 1100; 
+}
+
+.hamburger-menu a {
+    display: block;
+    color: #fff; /* ヘッダーの色に合わせる */
+    padding: 14px;
+    text-decoration: none;
+    font-size: 13px; /* フォントサイズをヘッダーに合わせる */
+}
+
+.top-border {
+    border-top: 1px solid white;
+}
+
+.top-bottom-border {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.error-message {
+    color: red;
+    font-size: 10px;
+
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* スライド */
+.swiper-container {
+    background-size: cover;
+    background-repeat: repeat;
+    width: 100%;
+    height: 660px;
+    margin: auto;
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: white;    
 }
 
-#hero h2 {
-    font-size: 3em;
+.swiper-wrapper {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
-/* セクション */
-section {
-    padding: 20px;
-    background: #f9f9f9;
-    margin: 20px 0;
-}
+.swiper-slide img {
+    max-height: 100%;
+    width: 100%;
+    display: block;
+    }
 
-section h2 {
-    color: #333;
-}
 
-#schedule, #access, #tickets {
+.swiper-pagination {
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    align-items: center;
+    z-index: 1000;
+ }
+
+x
+/* キャッチコピー */
+#catch_copy  {
+    font-size: 24px;
     text-align: center;
 }
 
+.font_red {
+    color: red;
+    font-size: 60px;
+}
+
+/* スケジュール */
+#schedule {
+    padding: 10px 0px;
+}
+
+.tags {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(182, 178, 178);
+    max-width: 810px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.tag {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 5px o;
+    flex-grow: 1;
+    height: 50px;
+    width: 270px;
+    border: 1px solid #635f5f; 
+    transition: background-color 0.3s ease;
+}
+
+.tag_one.active,
+.tag_one:hover {
+    background-color: #BEA574;
+    color: white;
+}
+
+.tag_two.active,
+.tag_two:hover {
+    background-color: #BEA574;
+    color: white;
+}
+
+.tag_three.active,
+.tag_three:hover {
+    background-color: #BEA574;
+    color: white;
+}
+
+.schedule_box {
+    display: none;
+    width: 100%;
+    max-width: 810px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+    height: 100px;
+    text-align: left;
+    align-items: center;
+    padding: 10px 5px;
+    border: 1px solid #635f5f; 
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease, transition 0.5s ease;
+}
+
+.schedule_box.active {
+    display: block;
+    opacity: 1;
+}
+
+/* アクセス */
+#access p {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.map_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.map_iframe {
+    width: 720px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /* フォーム */
-main {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.reserve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 label {
     display: block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
     margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="number"],
-input[type="date"],
-input[type="time"],
+input[type="tel"],
+select,
 textarea {
-    width: 100%;
+    display: block;
+    width: 500px;
     padding: 10px;
     margin-top: 5px;
-    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #635f5f;
 }
 
-input[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+.error-message {
+    color: red;
+}
+
+#submitBtn {
+    background-color: #BEA574;
     color: white;
-    border: none;
+    width: 500px;
+    padding: 10px 20px;
     margin-top: 10px;
-    cursor: pointer;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: not-allowed;
+    border: 1px solid #635f5f; 
+    opacity: 0.5;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #BEA574;
+}
+
+.required {
+    color: red;
+    font-size: 10px;
+}
+
+.optional {
+    color: black;
+    font-size: 10px;
 }
 
 /* フッター */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
+.footer_container {
+    background-color: #BEA574;
+    padding: auto;
+    height: 60px;
+    padding: 10px 0;
 }
+
+.footer_logo {
+    display: block;
+    width: 100px;
+    height: auto;
+    background-color: #BEA574;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 720px) {
+    .swiper-containers {
+        width: 100%;
+        height: auto;
+    }
+}  
+@media screen and (max-width: 400px) {
+    .header_right {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .header_left {
+        font-size: 11px;
+        text-align: left;
+        padding: 0 10px;
+    }
+}
+    

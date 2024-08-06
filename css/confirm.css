@@ -1,0 +1,73 @@
+/* confirm.php専用のスタイル */
+.confirmation-container {
+    max-width: 600px;
+    margin: 50px auto;
+    margin-bottom: 0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 12px 0 ;
+    text-align: center;
+}
+
+.confirmation-box {
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column;
+    width: 520px;
+    gap: 24px; /* 各フィールドの間隔 */
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.field strong {
+    font-weight: bold;
+    width: 30%;
+    text-decoration: none;
+}
+
+.field span {
+    width: 65%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.confirm-button, .confirm-form input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+.confirm-button {
+    background-color: #9a9999;
+    color: #fff;
+}
+
+.confirm-form input[type="submit"] {
+    background-color: #BEA574; /* ヘッダーと同じ色に調整 */
+    color: #fff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 300px; /* ボタンの間のスペース */
+    margin-top: 24px;
+}
