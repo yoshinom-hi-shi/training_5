@@ -1,9 +1,13 @@
 /* confirm.php専用のスタイル */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
 .confirmation-container {
     max-width: 600px;
     margin: 50px auto;
     margin-bottom: 0;
-    padding: 20px;
+    padding-top: 20px;
     border-radius: 8px;
 }
 

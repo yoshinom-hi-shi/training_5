@@ -22,13 +22,14 @@ $(document).ready(function() {
         return false;
     });
 
-    // タグのクリックでサービスボックスの表示/非表示を切り替え
-    $('.tag').click(function() {
-        var scheduleBox = $(this).data('service');
-        $('.schedule_box').removeClass('active').css('opacity', 0).slideUp(500);
-        $('#' + scheduleBox).addClass('active').css('opacity', 1).slideDown(500);
-        $('.tag').removeClass('active');
-        $(this).addClass('active');
+    $('.tag').click(function(event) {
+        event.preventDefault();  // デフォルトのクリック動作を防止
+    
+        var scheduleBox = $(this).data('service');  // クリックされたタグの関連データを取得
+        $('.schedule_box').removeClass('active').css("opacity", 0).slideUp(500);  // 全てのボックスを非表示に
+        $('#' + scheduleBox).addClass('active').css('opacity', 1).slideDown(500);  // 関連するボックスを表示
+        $('.tag').removeClass('active');  // 全てのタグからactiveクラスを削除
+        $(this).addClass('active');  // クリックされたタグにactiveクラスを追加
     });
 
     // ハンバーガーメニューの開閉処理
@@ -69,7 +70,11 @@ $(document).ready(function() {
             $errorMessage.text('有効な電話番号を入力してください。');
         }
 
-        $submitBtn.prop('disabled', !isValid).css('opacity', isValid ? 1 : 0.5);
+        if (isValid) {
+            $submitBtn.prop('disabled', false).addClass('enabled');
+        } else {
+            $submitBtn.prop('disabled', true).removeClass('enabled');
+        }
     };
 
     // 入力フィールドの変更を監視
@@ -84,20 +89,32 @@ $(document).ready(function() {
 
     validateForm(); // 初期ロード時のバリデーションチェック
 
-    // Swiperの初期化
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+    window.onload = function() {
+        // Swiperの初期化
+        var mySwiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // ページネーションをクリック可能にする
+            },
+            autoplay: false,
+            loop: false,
+            speed: 500,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+        });
+    
+        // 手動操作のボタンをクリックしたときの処理
+        $('.swiper-button-next').on('click', function() {
+            mySwiper.slideNext();
+        });
+    
+        $('.swiper-button-prev').on('click', function() {
+            mySwiper.slidePrev();
+        });
+    };
 });
