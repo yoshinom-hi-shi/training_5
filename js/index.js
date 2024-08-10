@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     // バリデーション
     const $submitBtn = $('#submitBtn');
-    const $form = $('#reserveForm');
+    const $form = $('#contact_form');
     const $errorMessage = $('#errorMessage');
 
     const validateForm = () => {
@@ -102,9 +102,12 @@ $(document).ready(function() {
             },
             autoplay: false,
             loop: false,
-            speed: 500,
-            slidesPerView: 1,
+            speed: 600,
+            slidesPerView: 1.2,
             spaceBetween: 10,
+            direction: "horizontal",
+            effect: "slide",    
+            simulateTouch: true,
             centeredSlides: true,
         });
     
