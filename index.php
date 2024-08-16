@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>training__5</title>
      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -39,9 +39,9 @@
         <section id="schedule">
              <h2>スケジュール</h2>
                   <div class="tags">
-                      <a href="#" class="tag tag_one active" data-service="one" onclick="return false;">９月１日</a>
-                      <a href="#" class="tag tag_two" data-service="two" onclick="return false;">９月２日</a>
-                      <a href="#" class="tag tag_three" data-service="three" onclick="return false;">９月３日</a>
+                      <div class="tag tag_one active" data-service="one">９月１日</div>
+                      <div class="tag tag_two" data-service="two">９月２日</div>
+                      <div class="tag tag_three" data-service="three">９月３日</div>
                   </div>
                   <div class="schedule_description">
                          <div id="one" class="schedule_box active">
@@ -87,7 +87,7 @@
 
     <?php include './php/footer.php'; ?>
     
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
