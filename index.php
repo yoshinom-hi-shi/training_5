@@ -26,8 +26,8 @@
                   <div class="swiper-slide"><img src="./img/slide_3.jpg" alt="Image 3"></div>
               </div>
               <!-- Add Navigation -->
-              <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>

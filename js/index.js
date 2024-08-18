@@ -95,7 +95,7 @@ $(document).ready(function() {
         },
        
         slidesPerView: 1, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
-        spaceBetween: 0, // スライド間の余白（px）
+        spaceBetween: 20, // スライド間の余白（px）
         centeredSlides: true, // アクティブなスライドを中央に配置する
        
         loop: true,  // 無限ループさせる

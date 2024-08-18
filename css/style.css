@@ -160,22 +160,11 @@ h2 {
 }
 
 /* スライド */
-.swiper-box {
-    position: relative;
-  }
-
 .swiper {
     position: relative;
-    background-size: cover;
-    background-repeat: repeat;
-    width: 100%;
-    height: calc(100vw * 0.5625); /* 16:9 の比率（例として16:9を使用） */
-    max-height: 780px;
-    margin: auto;
     margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 80%;
+    overflow: visible;
   } 
 
 .swiper-wrapper {
@@ -185,13 +174,7 @@ h2 {
 }
 
 .swiper-slide img {
-    height: 100%;
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
