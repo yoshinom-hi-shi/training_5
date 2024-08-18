@@ -24,7 +24,7 @@ h1 {
 
 .confirmation-box {
     display: flex;
-    margin: 20px 0;
+    margin: 24px 0;
     flex-direction: column;
     width: 520px;
     gap: 24px; /* 各フィールドの間隔 */

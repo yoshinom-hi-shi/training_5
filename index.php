@@ -18,17 +18,19 @@
         </nav>
 
         <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./img/slide_1.jpg" alt="Image 1"></div>
-                <div class="swiper-slide"><img src="./img/slide_2.jpg" alt="Image 2"></div>
-                <div class="swiper-slide"><img src="./img/slide_3.jpg" alt="Image 3"></div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+        <div class="swiper-box">
+          <div class="swiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/slide_1.jpg" alt="Image 1"></div>
+                  <div class="swiper-slide"><img src="./img/slide_2.jpg" alt="Image 2"></div>
+                  <div class="swiper-slide"><img src="./img/slide_3.jpg" alt="Image 3"></div>
+              </div>
+              <!-- Add Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
 
         <!-- キャッチコピー -->
@@ -60,7 +62,7 @@
              <h2>アクセス</h2>
                  <p>〒771-1154 徳島県徳島市応神町東貞方南川淵</p>
               <!-- Google Mapの埋め込み -->
-                     <div class="map_container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6607.067008345141!2d134.51810744393572!3d34.10708917594974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355373abe3d15637%3A0xac295ae5e2536dbe!2z5ZCJ6YeO5bed5YyX5bK46YGL5YuV5bqD5aC044K944OV44OI44Oc44O844Or5aC0ROmdog!5e0!3m2!1sja!2sjp!4v1723029470333!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     <div class="map_container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6607.067008345141!2d134.51810744393572!3d34.10708917594974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355373abe3d15637%3A0xac295ae5e2536dbe!2z5ZCJ6YeO5bed5YyX5bK46YGL5YuV5bqD5aC044K944OV44OI44Oc44O844Or5aC0ROmdog!5e0!3m2!1sja!2sjp!4v1723029470333!5m2!1sja!2sjp" width="100%" max-width=600px height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </section>
 
          <section id="reserve">
@@ -80,7 +82,6 @@
                         <label for="email">メールアドレス: <span class="required">*必須</span><input type="email" name="email" required placeholder="例）abcd1234@example.com"></label>
                         <label for="phone">電話番号: <span class="optional">※任意</span><input type="tel" name="phone" placeholder="例）09012345678"></label>
                         <button type="submit" id="submitBtn" disabled>送信</button>
-                        <div id="errorMessage" class="error-message"></div>
                     </form>
         </section>
     </div>

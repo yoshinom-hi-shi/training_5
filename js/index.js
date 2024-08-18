@@ -49,7 +49,6 @@ $(document).ready(function() {
         $form.find('input, select').each(function() {
             if ($(this).prop('required') && !$(this).val()) {
                 isValid = false;
-                $errorMessage.text('全ての必須項目を入力してください。');
                 return false; // ループを停止
             }
         });
@@ -89,35 +88,36 @@ $(document).ready(function() {
 
     validateForm(); // 初期ロード時のバリデーションチェック
 
-    window.onload = function() {
-        // Swiperの初期化
-        var mySwiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true, // ページネーションをクリック可能にする
-            },
-            autoplay: false,
-            loop: false,
-            speed: 600,
-            slidesPerView: 1.2,
-            spaceBetween: 10,
-            direction: "horizontal",
-            effect: "slide",    
-            simulateTouch: true,
-            centeredSlides: true,
-        });
-    
-        // 手動操作のボタンをクリックしたときの処理
-        $('.swiper-button-next').on('click', function() {
-            mySwiper.slideNext();
-        });
-    
-        $('.swiper-button-prev').on('click', function() {
-            mySwiper.slidePrev();
-        });
-    };
+    const mySwiper = new Swiper('.swiper', {
+        effect: 'fade', // フェードモードにする（デフォルトは 'slide'）
+        fadeEffect: {
+          crossFade: true, // クロスフェードを有効にする（フェードモードの場合 true 推奨）
+        },
+       
+        slidesPerView: 1, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
+        spaceBetween: 0, // スライド間の余白（px）
+        centeredSlides: true, // アクティブなスライドを中央に配置する
+       
+        loop: true,  // 無限ループさせる
+        loopAdditionalSlides: 1, // 無限ループさせる場合に複製するスライド数
+       
+        speed: 300, // スライドアニメーションのスピード（ミリ秒）
+       
+        autoplay: false,
+       
+        grabCursor: true, // PCでマウスカーソルを「掴む」マークにする
+        watchSlidesProgress: true, // スライドの進行状況を監視する
+       
+        pagination: {
+          el: '.swiper-pagination', // ページネーション要素のクラス
+          clickable: true, // クリックによるスライド切り替えを有効にする
+          type: 'bullets' // 'bullets'（デフォルト） | 'fraction' | 'progressbar'
+        },
+       
+        navigation: {
+          nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
+          prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
+        },
+
+    });
 });

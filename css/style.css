@@ -47,7 +47,8 @@ body {
 
 .header_right {
     display: flex;
-    width: 444px;
+    width: 100%;
+    max-width: 444px;
     gap: 52px;
     margin: 0 auto;
     justify-content: flex-start;
@@ -158,6 +159,89 @@ h2 {
     padding: 20px;
 }
 
+/* スライド */
+.swiper-box {
+    position: relative;
+  }
+
+.swiper {
+    position: relative;
+    background-size: cover;
+    background-repeat: repeat;
+    width: 100%;
+    height: calc(100vw * 0.5625); /* 16:9 の比率（例として16:9を使用） */
+    max-height: 780px;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+.swiper-wrapper {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 10px;
+    }
+ 
+ /* スワイパー矢印のスタイル */
+.swiper-button-next, .swiper-button-prev {
+    width: 40px; /* ボタンの幅 */
+    height: 40px; /* ボタンの高さ */
+    background-color: white; /* ボタンの背景色 */
+    border-radius: 50%; /* 丸くする */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  /* 矢印の右側 */
+  .swiper-button-next {
+    right: 10px; /* 右側に配置 */
+  }
+  
+  /* 矢印の左側 */
+  .swiper-button-prev {
+    left: 10px; /* 左側に配置 */
+  }
+  
+  /* 矢印の装飾 */
+  .swiper-button-next::after, .swiper-button-prev::after {
+    content: ''; /* 内容なし */
+    display: block;
+    width: 0; /* 幅 */
+    height: 0; /* 高さ */
+    border-style: solid;
+  }
+  
+  .swiper-button-next::after {
+    border-width: 5px 0 5px 7px; /* 矢印のサイズ */
+    border-color: transparent transparent transparent gray; /* 矢印の色 */
+  }
+  
+  .swiper-button-prev::after {
+    border-width: 5px 7px 5px 0; /* 矢印のサイズ */
+    border-color: transparent gray transparent transparent; /* 矢印の色 */
+  }
+
 /* キャッチコピー */
 #catch_copy  {
     font-size: 24px;
@@ -260,7 +344,8 @@ h2 {
 }
 
 .map_iframe {
-    width: 720px;
+    width: 100%;
+    max-width: 720px;
     height: auto;
     align-items: center;
     justify-content: center;
@@ -272,20 +357,20 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
-label {
+#contact_form {
     display: block;
     text-decoration: none;
     font-size: 16px;
+    width: 100%;
+    max-width: 500px;
     font-weight: bold;
-    margin-top: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin: 0 auto;
 }
 
 input[type="text"],
@@ -294,7 +379,7 @@ input[type="tel"],
 select,
 textarea {
     display: block;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     padding: 10px;
     margin-top: 5px;
@@ -309,7 +394,8 @@ textarea {
 #submitBtn {
     background-color: #BEA574;
     color: white;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     padding: 10px 20px;
     margin-top: 10px;
     margin-bottom: 16px;
@@ -350,7 +436,7 @@ textarea {
 
 .footer_logo {
     display: block;
-    width: 100%;
+    width: 100px;
     height: auto;
     background-color: #BEA574;
     align-items: center;
