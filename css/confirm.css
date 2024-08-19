@@ -5,6 +5,7 @@ body {
 
 .confirmation-container {
     max-width: 600px;
+    width: 100%;
     margin: 50px auto;
     margin-bottom: 0;
     padding-top: 20px;
@@ -26,7 +27,8 @@ h1 {
     display: flex;
     margin: 24px 0;
     flex-direction: column;
-    width: 520px;
+    width: 100%;
+    max-width: 600px;
     gap: 24px; /* 各フィールドの間隔 */
 }
 
@@ -75,3 +77,27 @@ h1 {
     gap: 300px; /* ボタンの間のスペース */
     margin-top: 24px;
 }
+
+@media screen and (max-width: 470px) {
+    .confirm-button ,.confirm-form input[type="submit"] {
+        font-size: 12px;
+    }
+
+    .button-container {
+        gap: 220px; /* ボタンの間のスペース */
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .field strong ,.field span {
+        font-size: 13px;
+    }
+
+}
+@media screen and (max-width: 378px) {
+    .button-container {
+        gap: 198px; /* ボタンの間のスペース */
+    }
+
+}
+

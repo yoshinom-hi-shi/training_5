@@ -89,7 +89,7 @@ $(document).ready(function() {
     validateForm(); // 初期ロード時のバリデーションチェック
 
     const mySwiper = new Swiper('.swiper', {
-        effect: 'fade', // フェードモードにする（デフォルトは 'slide'）
+
         fadeEffect: {
           crossFade: true, // クロスフェードを有効にする（フェードモードの場合 true 推奨）
         },

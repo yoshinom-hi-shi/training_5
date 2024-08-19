@@ -164,21 +164,10 @@ h2 {
     position: relative;
     margin-top: 60px;
     width: 80%;
-    overflow: visible;
   } 
-
-.swiper-wrapper {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
 
 .swiper-slide img {
     width: 100%;
-    }
-
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 10px;
     }
  
  /* スワイパー矢印のスタイル */
@@ -196,15 +185,6 @@ h2 {
     z-index: 10;
   }
   
-  /* 矢印の右側 */
-  .swiper-button-next {
-    right: 10px; /* 右側に配置 */
-  }
-  
-  /* 矢印の左側 */
-  .swiper-button-prev {
-    left: 10px; /* 左側に配置 */
-  }
   
   /* 矢印の装飾 */
   .swiper-button-next::after, .swiper-button-prev::after {
@@ -319,21 +299,10 @@ h2 {
 }
 
 .map_container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.map_iframe {
-    width: 100%;
     max-width: 720px;
-    height: auto;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
 }
-
 
 /* フォーム */
 .reserve {

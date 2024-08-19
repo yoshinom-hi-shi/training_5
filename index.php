@@ -18,7 +18,6 @@
         </nav>
 
         <!-- Swiper -->
-        <div class="swiper-box">
           <div class="swiper">
               <div class="swiper-wrapper">
                   <div class="swiper-slide"><img src="./img/slide_1.jpg" alt="Image 1"></div>
@@ -28,10 +27,9 @@
               <!-- Add Navigation -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
+                        <!-- Add Pagination -->
+             <div class="swiper-pagination"></div>
           </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
 
         <!-- キャッチコピー -->
         <section id="catch_copy">
