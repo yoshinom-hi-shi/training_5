@@ -89,12 +89,7 @@ $(document).ready(function() {
     validateForm(); // 初期ロード時のバリデーションチェック
 
     const mySwiper = new Swiper('.swiper', {
-
-        fadeEffect: {
-          crossFade: true, // クロスフェードを有効にする（フェードモードの場合 true 推奨）
-        },
-       
-        slidesPerView: 1, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
+        slidesPerView: 1.3, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
         spaceBetween: 20, // スライド間の余白（px）
         centeredSlides: true, // アクティブなスライドを中央に配置する
        
